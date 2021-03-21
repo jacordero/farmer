@@ -8,6 +8,7 @@ url = 'https://md-datasets-cache-zipfiles-prod.s3.eu-west-1.amazonaws.com/yshdby
 zip_name = "data.zip"
 wget.download(url, zip_name)
 
+print("unzipping")
 # Unzip it and standardize the .csv filename
 import zipfile
 with zipfile.ZipFile(zip_name,"r") as zip_ref:
